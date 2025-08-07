@@ -1,0 +1,28 @@
+ body {
+    background-color: white;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.day-column-parent {
+    background-color: white;
+    border-radius: 18px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 60px;
+    width: 100%;
+    max-width: 250 px;
+    text-align: left;
+}
+
+.sunday-column {
+    background-color: #d63abc;
+    border-radius: inherit;
+    box-shadow: inherit;
+    padding: inherit;
+    width: inherit;
+    max-width: inherit;
+}

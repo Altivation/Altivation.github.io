@@ -8,10 +8,13 @@ window.onload = () => {
 }
 
 function handleCredentialResponse(response) {
-  console.log("Google token:", response.credential);
-  // Optionally decode or store token
+    console.log("Google token:", response.credential);
+    // Optionally decode or store token
+    localStorage.setItem('google_token', response.credential);
+    
 }
 
 function triggerGoogleLogin() {
-  google.accounts.id.prompt();
+    console.log("Google login triggered");
+    google.accounts.id.prompt();
 }
