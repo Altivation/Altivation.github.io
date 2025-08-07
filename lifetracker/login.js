@@ -1,20 +1,29 @@
-let googleClient;
+let m_clientID = "534160900491-mkm54kduoibu8bvg0mqdqkhi38f53kq0.apps.googleusercontent.com"
+let m_redirectURI = "https://altivation.github.io/lifetracker/success.html";
+let loginScope = "openid email profile";
 
 window.onload = () => {
     google.accounts.id.initialize({
-        client_id: "534160900491-mkm54kduoibu8bvg0mqdqkhi38f53kq0.apps.googleusercontent.com",
+        client_id: m_clientID,
         callback: handleCredentialResponse,
     });
 }
 
 function handleCredentialResponse(response) {
     console.log("Google token:", response.credential);
-    // Optionally decode or store token
     localStorage.setItem('google_token', response.credential);
-    
+    window.location.href = getPath('/login-success.html');
 }
 
 function triggerGoogleLogin() {
     console.log("Google login triggered");
-    google.accounts.id.prompt();
+    
+    const url = `https://accounts.google.com/o/oauth2/v2/auth?` +
+        `client_id=${m_clientIDlientId}&` +
+        `redirect_uri=${encodeURIComponent(m_redirectUri)}&` +
+        `response_type=token&` +
+        `scope=${encodeURIComponent(loginScope)}&` +
+        `prompt=select_account`;
+
+    window.open(url, "googleSignIn", "width=500,height=600");
 }
