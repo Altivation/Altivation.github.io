@@ -19,8 +19,8 @@ function triggerGoogleLogin() {
     console.log("Google login triggered");
     
     const url = `https://accounts.google.com/o/oauth2/v2/auth?` +
-        `client_id=${m_clientIDlientId}&` +
-        `redirect_uri=${encodeURIComponent(m_redirectUri)}&` +
+        `client_id=${m_clientID}&` +
+        `redirect_uri=${encodeURIComponent(m_redirectURI)}&` +
         `response_type=token&` +
         `scope=${encodeURIComponent(loginScope)}&` +
         `prompt=select_account`;
