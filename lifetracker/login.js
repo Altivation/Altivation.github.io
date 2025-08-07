@@ -1,5 +1,5 @@
 let m_clientID = "534160900491-mkm54kduoibu8bvg0mqdqkhi38f53kq0.apps.googleusercontent.com"
-let m_redirectURI = "https://altivation.github.io/lifetracker/success.html";
+let m_redirectURI = "https://altivation.github.io/lifetracker/login-success.html";
 let loginScope = "openid email profile";
 
 window.onload = () => {
