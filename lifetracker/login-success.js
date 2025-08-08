@@ -1,11 +1,12 @@
 window.onload = () => {
-    console.log( "Checking login status...");
-    console.log( "Local storage token:", localStorage.getItem('google_token') );
-    const isLoggedIn = localStorage.getItem('google_token') !== null;
-    if (isLoggedIn) {
-        //window.location.href = getPath('/calendar.html');
-    }
-    else {
-        //window.location.href = getPath('/index.html');
+    const params = new URLSearchParams(window.location.hash.substring(1));
+    const accessToken = params.get('access_token');
+
+    if (window.opener && accessToken)
+    {
+        window.opener.postMessage({
+            type: 'googleAuth',
+            token: accessToken
+        });
     }
 }
