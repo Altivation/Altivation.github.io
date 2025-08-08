@@ -1,7 +1,7 @@
 window.onload = () => {
     const params = new URLSearchParams(window.location.hash.substring(1));
     const accessToken = params.get('access_token');
-
+    console.log("Access token:", accessToken);
     if (window.opener && accessToken)
     {
         window.opener.postMessage({

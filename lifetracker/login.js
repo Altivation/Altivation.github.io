@@ -26,7 +26,7 @@ function triggerGoogleLogin() {
         `prompt=select_account`;
 
     const popup = window.open(url, "googleSignIn", "width=500,height=600");
-    /*
+    
     window.addEventListener('message', (event) => {
         console.log( 'received event');
         if (event.origin !== window.location.origin) return;
@@ -35,7 +35,7 @@ function triggerGoogleLogin() {
             localStorage.setItem('google_token', event.data.token);
             popup.close();
         }
-        //window.location.href = getPath('/login-success.html');
+        window.location.href = getPath('/calendar.html');
     });
-    */
+    
 }
