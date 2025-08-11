@@ -6,7 +6,7 @@ export function getGoogleAuthURL() {
         `client_id=${m_clientID}&` +
         `redirect_uri=${encodeURIComponent(m_redirectURI)}&` +
         `response_type=token&` +
-        `scope=https://www.googleapis.com/auth/calendar` +
+        `scope=https://www.googleapis.com/auth/calendar&` +
         `prompt=consent`;
 
     return url;
