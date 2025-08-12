@@ -7,7 +7,7 @@ export function getGoogleAuthURL() {
         `redirect_uri=${encodeURIComponent(m_redirectURI)}&` +
         `response_type=token&` +
         `scope=https://www.googleapis.com/auth/calendar&` +
-        `prompt=consent`;
+        `prompt=select_account`;
 
     return url;
 }
